@@ -1,0 +1,68 @@
+Baba Is You — Projet Java
+Présentation
+Ce projet est une implémentation simplifiée du jeu Baba Is You dans le cadre du projet Java de l’Université Paris Cité.
+Le jeu se déroule sur une grille bidimensionnelle.
+Les entités (Baba, murs, rochers, drapeau, mots) occupent des cases et interagissent selon des règles écrites directement dans le jeu, sous la forme :
+SUJET IS ACTION
+
+Exemples :
+
+BABA IS YOU
+ROCK IS PUSH
+FLAG IS WIN
+
+Les règles peuvent être modifiées dynamiquement en déplaçant les mots sur la grille.
+
+Fonctionnalités principales : 
+
+Déplacements au clavier (flèches directionnelles)
+Poussée d’objets en chaîne
+Application dynamique des règles
+Détection de la condition de victoire
+Interface graphique avec Swing
+Affichage par sprites (images)
+
+
+Prérequis : 
+
+Java JDK 21 ou compatible
+Environnement Unix (Linux / macOS) ou terminal compatible
+Aucun outil externe requis
+
+
+Compilation : 
+À la racine du projet, tapez la commande suivante : 
+
+"javac -d bin src\*.java"
+
+Cela compile l’ensemble des sources Java dans le dossier bin.
+
+Exécution
+Toujours depuis la racine du projet, lancez le programme avec :
+
+"java -cp bin LanceurJeu"
+
+Utilisation :
+
+Flèches directionnelles : déplacer les entités contrôlées (YOU)
+Objectif : atteindre une entité ayant la propriété WIN
+Les règles peuvent être modifiées en poussant les mots
+
+
+Organisation du projet : 
+
+src/ : sources Java
+src/ressources/ : images utilisées par l’interface graphique
+bin/ : classes compilées (généré à la compilation)
+
+Les classes sont organisées de manière à séparer :
+
+le modèle (plateau, entités, règles),
+la vue (interface graphique),
+le contrôle (clavier, boucle de jeu).
+
+
+Remarques
+
+Les classes de test et l’affichage console ont été retirés au profit de l’interface graphique.
+La position des entités est définie exclusivement par leur emplacement dans la matrice du plateau, afin d’éviter toute incohérence.
